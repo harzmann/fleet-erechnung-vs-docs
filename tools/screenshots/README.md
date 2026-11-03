@@ -51,7 +51,7 @@ Nur öffnen und ansehen. **Nicht** auf Versand, Export, Speichern im Taskmanager
 
 Fensteraufnahmen mit dem Computer-Use-Werkzeug erstellen und nach Sichtprüfung unter `docs/assets/screenshots/` speichern. Die Aufnahmen vom 3. November 2026 wurden mit `@oai/sky.get_window_state` erfasst. Dessen JPEG-Bilddaten wurden ohne Änderung der dekodierten Pixel in PNG umkodiert. Es wurden keine Inhalte übermalt, nachgebildet oder ausgetauscht. Originale bleiben lokal im ignorierten `.qa/captures/`-Verzeichnis.
 
-`docs/assets/screenshots/manifest.json` enthält Dateinamen, Fensterbezeichnungen, Abmessungen, Prüfsummen und den Fingerabdruck der verwendeten Original-Viewer-Assembly. Keine EXE, DLL, Zugangsdaten oder eigentlichen Datenbankdateien veröffentlichen.
+`docs/assets/screenshots/manifest.json` enthält Dateinamen, Fensterbezeichnungen, Abmessungen, Prüfsummen und den Fingerabdruck der verwendeten Original-Viewer-Assembly. Der SQL-Fingerprint verwendet UTF-8 mit normalisierten LF-Zeilenenden, damit er unter Windows und im Linux-Build übereinstimmt. Keine EXE, DLL, Zugangsdaten oder eigentlichen Datenbankdateien veröffentlichen.
 
 ## Veröffentlichungsprüfung
 

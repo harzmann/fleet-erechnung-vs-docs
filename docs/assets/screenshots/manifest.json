@@ -4,7 +4,7 @@
   "capture_tool": "computer-use @oai/sky get_window_state",
   "database_fixture": "EHFleet_Docs_Demo v1",
   "original_viewer_sha256": "8387a467911b25f92b5eedec810d7302051028b17fdecfb1907407d7c84f9bc0",
-  "fixture_sha256": "f232d97efafe6973590301a70eddf9ea388b92e813bbda18a7be35534687a7da",
+  "fixture_sha256": "abf9199b4edc84921f60589dd86aee86db8dd5904ea9c58f0032b543d322245c",
   "images": [
     {
       "name": "rechnungsuebersicht-wa",
@@ -87,5 +87,6 @@
   "original_classlibrary_sha256": "882ea46cc71e6fbe5d4e1f9d75358d26a8ad1eec684f63bed0b6b52b5e3a9ae4",
   "product_commit": "878c3504bddc37d0dd91f7a2cae9c75a5d34756f",
   "includes_local_source_changes": true,
-  "display_adjustments": "Native window sizes and minimum grid-column widths only; no image-content changes"
+  "display_adjustments": "Native window sizes and minimum grid-column widths only; no image-content changes",
+  "fixture_hash_normalization": "UTF-8 with LF line endings"
 }

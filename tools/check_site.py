@@ -74,6 +74,9 @@ def main():
         errors.append("Workflow must not publish releases")
     screenshots = root / "docs/assets/screenshots"
     manifest = json.loads((screenshots / "manifest.json").read_text(encoding="utf-8"))
+    fixture_text = (root / "tools/screenshots/demo.sql").read_text(encoding="utf-8")
+    if hashlib.sha256(fixture_text.encode("utf-8")).hexdigest() != manifest["fixture_sha256"]:
+        errors.append("Demo SQL fixture checksum differs (UTF-8/LF)")
     if len(manifest["images"]) != 7:
         errors.append("Expected seven documented original screenshots")
     for entry in manifest["images"]:
