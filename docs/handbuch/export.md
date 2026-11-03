@@ -2,6 +2,10 @@
 
 Für einen Export benötigen Sie vollständige Stammdaten und einen beschreibbaren [Ausgabepfad](../vorbereitung/firma.md). Wählen Sie das Format nach der Vorgabe des Rechnungsempfängers.
 
+[![Original-WA-Übersicht mit den Bereichen Export für ausgewählte und alle Rechnungen](../assets/screenshots/rechnungsuebersicht-wa.png)](../assets/screenshots/rechnungsuebersicht-wa.png)
+
+*Original-Anwendungsfenster mit fiktiven Demo-Daten. Die Schaltflächen unter Export lösen die Verarbeitung aus; die Aufnahme selbst zeigt keinen ausgeführten Export. [Bild in voller Auflösung öffnen](../assets/screenshots/rechnungsuebersicht-wa.png).*
+
 ## Einzelne oder ausgewählte Rechnungen
 
 1. Wählen Sie die Rechnungsart.

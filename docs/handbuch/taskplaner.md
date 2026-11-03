@@ -2,6 +2,12 @@
 
 Unter **Taskplaner → Administration** öffnen Sie den **E-Rechnung Task Manager**. Er verwaltet Aufgaben in der Datenbank und zugehörige Einträge der Windows-Aufgabenplanung. Er ist für regelmäßige Exporte und E-Mail-Läufe vorgesehen.
 
+[![Original-Taskmanager mit deaktiviertem Demo-Plan für täglichen XML-Export der Werkstattrechnungen um 18 Uhr](../assets/screenshots/taskplaner.png)](../assets/screenshots/taskplaner.png)
+
+*Original-Anwendungsfenster mit fiktiven Demo-Daten. Der dargestellte Plan ist deaktiviert, hat noch keinen Lauf und wurde nicht als Windows-Aufgabe registriert. [Bild in voller Auflösung öffnen](../assets/screenshots/taskplaner.png).*
+
+Das Beispiel verwendet die Domäne `Rechnung` für WA, die Aktion `EXPORT_XML` und `DAILY` mit Intervall 1 um 18:00 Uhr. **Aktiv**, **Duplikate einschließen** und **Nur neue Rechnungen seit letzer Ausführung** sind ausgeschaltet. Die Aufnahme erklärt die Felder und bestätigt keinen ausgeführten Export.
+
 ## Voraussetzungen
 
 Vorher müssen ein manueller Export und gegebenenfalls der E-Mail-Versand für die betreffende Rechnungsart erfolgreich geprüft sein. Die Anwendung, die Datenbank, der Validator und die Ausgabepfade müssen unter dem Benutzer der Aufgabe erreichbar sein.

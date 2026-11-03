@@ -22,4 +22,6 @@ python -m mkdocs serve
 
 `site/` ist ein ignoriertes Build-Verzeichnis. GitHub Actions prüft Pull Requests und veröffentlicht `main` über GitHub Pages. In den Repository-Einstellungen muss Pages auf **GitHub Actions** eingestellt sein. Der Pages-Workflow benötigt ausschließlich Leserechte für Inhalte und im Deployment Schreibrechte für Pages sowie ein OIDC-Token; er erstellt keine Releases.
 
-Die Quellenzuordnung und SHA-256-Werte des geprüften Produkt-Arbeitsstands stehen in `source-register.json`. Produktcode, Datenbankinhalte und lokale Verbindungsdaten werden nicht übernommen. Pflegehinweise: [Dokumentation pflegen](docs/referenz/pflege.md).
+Die Quellenzuordnung und SHA-256-Werte des geprüften Produkt-Arbeitsstands stehen in `source-register.json`. Produktcode, produktive Datenbankinhalte und lokale Verbindungsdaten werden nicht übernommen. Pflegehinweise: [Dokumentation pflegen](docs/referenz/pflege.md).
+
+Die sieben Original-Anwendungsaufnahmen verwenden ausschließlich fiktive Daten aus einer getrennten Demo-Fixture. [Screenshot-Host, Demo-SQL und Reproduktion](tools/screenshots/README.md) sowie das [Bildregister](docs/assets/screenshots/manifest.json) liegen im Repository; Build-Ausgaben und Datenbankdateien werden nicht veröffentlicht.

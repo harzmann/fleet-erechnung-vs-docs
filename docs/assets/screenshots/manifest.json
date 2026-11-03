@@ -1,0 +1,91 @@
+{
+  "captured_on": "2026-11-03",
+  "kind": "Original-Anwendungsfenster mit fiktiven Demo-Daten",
+  "capture_tool": "computer-use @oai/sky get_window_state",
+  "database_fixture": "EHFleet_Docs_Demo v1",
+  "original_viewer_sha256": "8387a467911b25f92b5eedec810d7302051028b17fdecfb1907407d7c84f9bc0",
+  "fixture_sha256": "f232d97efafe6973590301a70eddf9ea388b92e813bbda18a7be35534687a7da",
+  "images": [
+    {
+      "name": "rechnungsuebersicht-wa",
+      "source_mime": "image/jpeg",
+      "width": 1946,
+      "height": 583,
+      "window": "FLEET XRechnung",
+      "file": "rechnungsuebersicht-wa.png",
+      "sha256": "dc633c270b349fa4533affde70df7a33203df8c81cf8caa34b6546f1282ff93a",
+      "source_capture_sha256": "8c875ec2f60a0fab5614247e41642fa06dc43a026fc29fce8e0f1dd08c53bf69",
+      "encoding": "Original JPEG capture re-encoded to PNG without pixel changes"
+    },
+    {
+      "name": "rechnungsuebersicht-ta",
+      "source_mime": "image/jpeg",
+      "width": 1946,
+      "height": 583,
+      "window": "FLEET XRechnung",
+      "file": "rechnungsuebersicht-ta.png",
+      "sha256": "7181b98954f5ba3db32512e6f88d7d06fede702d4e72d9a039d32816c12e7895",
+      "source_capture_sha256": "bd5cfd0bd8f998074502f8b026135490494a5f86ff6748f8881253c26be542b7",
+      "encoding": "Original JPEG capture re-encoded to PNG without pixel changes"
+    },
+    {
+      "name": "verkaeufer-firmenstammdaten",
+      "source_mime": "image/jpeg",
+      "width": 402,
+      "height": 401,
+      "window": "VerkÃ¤ufer",
+      "file": "verkaeufer-firmenstammdaten.png",
+      "sha256": "f5f6bbeb728481e6800cf55b900c972acce1dae694b987a343d60150a9afad82",
+      "source_capture_sha256": "4757c9a6083f51ebd4b7f0adc75328833c414c236117adad12850a0c04605378",
+      "encoding": "Original JPEG capture re-encoded to PNG without pixel changes"
+    },
+    {
+      "name": "verkaeufer-erechnung-wa",
+      "source_mime": "image/jpeg",
+      "width": 402,
+      "height": 401,
+      "window": "VerkÃ¤ufer",
+      "file": "verkaeufer-erechnung-wa.png",
+      "sha256": "8497d0fcce7552229bf35bc0fa9f5ee5b35e14f1d98718987301cf95698ef7cf",
+      "source_capture_sha256": "a0e19ada1fbd209bcb41476ea03386e57e2e1cb8e8cfaf6243055ed51aedd493",
+      "encoding": "Original JPEG capture re-encoded to PNG without pixel changes"
+    },
+    {
+      "name": "mengeneinheiten",
+      "source_mime": "image/jpeg",
+      "width": 1436,
+      "height": 423,
+      "window": "Mengeneinheiten",
+      "file": "mengeneinheiten.png",
+      "sha256": "19dc6703ff4c6dace15fdd37abefbf55a259509f1337b2208fd173fbaa4733f4",
+      "source_capture_sha256": "f04077d2c38d1ca34d35c766891c6b96fb15bcee4db9fe2d6012682fff388a31",
+      "encoding": "Original JPEG capture re-encoded to PNG without pixel changes"
+    },
+    {
+      "name": "steuersaetze",
+      "source_mime": "image/jpeg",
+      "width": 1886,
+      "height": 423,
+      "window": "SteuersÃ¤tze",
+      "file": "steuersaetze.png",
+      "sha256": "38b25336810c10fb1870e8d0d61e7ea9f4c490e48cd3bad0b46058b003617efd",
+      "source_capture_sha256": "1fb30b3f800983970bc3f475ca3b072308119b355e6ce0e5133eb5fd638df4ab",
+      "encoding": "Original JPEG capture re-encoded to PNG without pixel changes"
+    },
+    {
+      "name": "taskplaner",
+      "source_mime": "image/jpeg",
+      "width": 1252,
+      "height": 752,
+      "window": "E-Rechnung Task Manager",
+      "file": "taskplaner.png",
+      "sha256": "24cccc953886d5be4861cd8e8ec6d766d1854382c24e3e8b0d4792e781b1458b",
+      "source_capture_sha256": "295f9a81c2cb069a452abe955727cf6bc2d84a7164cba372c76918f7b89f3f77",
+      "encoding": "Original JPEG capture re-encoded to PNG without pixel changes"
+    }
+  ],
+  "original_classlibrary_sha256": "882ea46cc71e6fbe5d4e1f9d75358d26a8ad1eec684f63bed0b6b52b5e3a9ae4",
+  "product_commit": "878c3504bddc37d0dd91f7a2cae9c75a5d34756f",
+  "includes_local_source_changes": true,
+  "display_adjustments": "Native window sizes and minimum grid-column widths only; no image-content changes"
+}

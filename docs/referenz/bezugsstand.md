@@ -53,6 +53,14 @@ Der zusätzlich im Produktrepo vorhandene Ordner `ZUGFeRD/` ist nicht mit der ta
 
 Die Handbücher dokumentieren diese Beobachtungen; sie ändern den Produktcode nicht. Insbesondere werden keine uneingeschränkte Normkonformität, revisionssichere Archivierung oder qualifizierte elektronische Signatur zugesagt. Der vorhandene Speicherpfad berechnet einen SHA-256-Hash; daraus allein folgt keine solche Signatur.
 
+## Originalaufnahmen mit fiktiven Daten
+
+Die sieben ergänzten Screenshots vom **3. November 2026** zeigen echte Programmfenster des unveränderten Produkt-Arbeitsstands. Ein separater .NET-8-Host öffnet die Original-Formularklassen gegen die neu angelegte lokale Datenbank `EHFleet_Docs_Demo`. Firmen, Kontakte, Rechnungen und Identifikationsangaben sind ausschließlich fiktiv; Unitcodes und Steuerkategorien sind reale Standardwerte.
+
+Für die Lesbarkeit wurden Fenster- und Spaltenbreiten angepasst. Bildinhalte wurden weder nachgebildet noch nachträglich ausgetauscht; die Original-Fensteraufnahmen wurden lediglich pixelgleich von JPEG nach PNG umkodiert. Die Bilder bestätigen keine erfolgreiche Rechnungsvalidierung. Die vorhandenen Steuer- und Bankplatzhalter sind dafür ausdrücklich ungeeignet.
+
+Der Demo-Aufgabenplan blieb deaktiviert und wurde nicht als Windows-Aufgabe registriert. Es wurden weder Versand noch Export oder Festschreibung gestartet. Das Aufnahme-Datenmodell ist vereinfacht und keine Vorlage für eine produktive Datenbank. [Fixture und Screenshot-Host](https://github.com/harzmann/fleet-erechnung-vs-docs/tree/main/tools/screenshots) sowie das [Bildregister](https://github.com/harzmann/fleet-erechnung-vs-docs/blob/main/docs/assets/screenshots/manifest.json) dokumentieren die Reproduktion und die Prüfsummen.
+
 ## Durchgeführte und ausstehende Nachweise
 
 Durchgeführt wurden der statische Abgleich der beschriebenen Oberfläche und Abläufe, die Prüfung der verwendeten Standardcodes anhand offizieller Quellen sowie die Kontrolle der sechs Einheiten und fünf VATEX-Beispiele gegen die eingebundene Paket-Assembly. Die Beispielumrechnungen wurden unabhängig nachgerechnet.

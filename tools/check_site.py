@@ -1,6 +1,8 @@
 """Check built documentation links, fragment targets, search, and download policy."""
 
 import json
+import hashlib
+import struct
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
@@ -70,9 +72,24 @@ def main():
     workflow = (root / ".github/workflows/pages.yml").read_text(encoding="utf-8")
     if "contents: write" in workflow or "gh release" in workflow:
         errors.append("Workflow must not publish releases")
+    screenshots = root / "docs/assets/screenshots"
+    manifest = json.loads((screenshots / "manifest.json").read_text(encoding="utf-8"))
+    if len(manifest["images"]) != 7:
+        errors.append("Expected seven documented original screenshots")
+    for entry in manifest["images"]:
+        png = screenshots / entry["file"]
+        data = png.read_bytes()
+        if data[:8] != b"\x89PNG\r\n\x1a\n":
+            errors.append(f"Invalid PNG: {png.name}")
+        elif struct.unpack(">II", data[16:24]) != (entry["width"], entry["height"]):
+            errors.append(f"Screenshot dimensions differ: {png.name}")
+        if hashlib.sha256(data).hexdigest() != entry["sha256"]:
+            errors.append(f"Screenshot checksum differs: {png.name}")
+        if not any(entry["file"] in href for page in pages.values() for href in page.links):
+            errors.append(f"Screenshot is not embedded or linked: {png.name}")
     if errors:
         raise SystemExit("\n".join(errors))
-    print(f"OK: {len(pages)} HTML pages, {link_count} links, anchors, search topics, no release downloads.")
+    print(f"OK: {len(pages)} HTML pages, {link_count} links, seven screenshot checksums, anchors, search topics, no release downloads.")
 
 
 if __name__ == "__main__":

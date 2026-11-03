@@ -14,6 +14,16 @@ BT steht für „Business Term“, also ein fachlich definiertes Rechnungselemen
 
 Die offizielle Zuordnung beschreibt [BT-120 als Text](https://docs.peppol.eu/poacc/billing/3.0/syntax/ubl-invoice/cac-TaxTotal/cac-TaxSubtotal/cac-TaxCategory/cbc-TaxExemptionReason/) und [BT-121 als Code](https://docs.peppol.eu/poacc/billing/3.0/syntax/ubl-invoice/cac-TaxTotal/cac-TaxSubtotal/cac-TaxCategory/cbc-TaxExemptionReasonCode/). Eine ältere technische Projektdokumentation vertauscht diese Begriffe; für dieses Handbuch gilt die oben gezeigte korrekte Zuordnung.
 
+[![Original-Steuersatzfenster mit den Kategorien S, AE, K, G und O sowie sichtbaren Feldern ERechnung_BT151, ERechnung_BT120 und ERechnung_BT121](../assets/screenshots/steuersaetze.png)](../assets/screenshots/steuersaetze.png)
+
+*Original-Anwendungsfenster mit fiktiven Demo-Daten. Die Kategorie- und VATEX-Codes sind reale Standardwerte; die Matchcodes und Fallbezeichnungen sind erfundene Konfigurationsbeispiele. [Bild in voller Auflösung öffnen](../assets/screenshots/steuersaetze.png).*
+
+Die erste Zeile zeigt **S** bei beispielhaft **19 %** für Werkstatt und Diesel; beide Befreiungsfelder sind leer. Für **AE** steht der Grundtext in **BT-120**, die Anwendungseingabe `VATEX_EU_AE` in **BT-121**. In der XML heißt derselbe offizielle Code `VATEX-EU-AE`.
+
+**AE**, **K**, **G** und **O** sind nur für den jeweils fachlich zutreffenden Fall gedacht. Eine Fahrt ins EU-Ausland wird dadurch nicht automatisch zu einer innergemeinschaftlichen Warenlieferung. Bei **O** ist die numerische Null im Demo-Stammdatensatz keine Vorgabe, in der XML einen Umsatzsteuersatz auszugeben. Das Aufnahme-Datenmodell ist bewusst vereinfacht und keine produktive Datenbankvorlage.
+
+Die zugehörigen Definitionen stehen in der [offiziellen Steuerkategorienliste](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNCL5305/) und der [VATEX-Liste](https://docs.peppol.eu/poacc/billing/3.0/codelist/vatex/).
+
 ## Beispiele für reale Steuerkategorien
 
 Die Codes sind in der [offiziellen Peppol-Auswahl aus UNCL5305](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNCL5305/) definiert. Die folgenden Zahlen und Texte sind Konfigurationsbeispiele für fachlich bereits bestätigte Fälle, keine pauschale Zuordnung aller FLEET-Leistungen.

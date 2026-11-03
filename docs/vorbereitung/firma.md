@@ -12,6 +12,14 @@
 
 Die Parameternummern dienen zur eindeutigen Zuordnung bei Rückfragen an die Administration. Im normalen Ablauf verwenden Sie die beschrifteten Eingabefelder.
 
+## Beispiel: Demo-Werkstatt Elbtal
+
+[![Original-Verkäuferdialog mit fiktiven Firmenstammdaten der Demo-Werkstatt Elbtal](../assets/screenshots/verkaeufer-firmenstammdaten.png)](../assets/screenshots/verkaeufer-firmenstammdaten.png)
+
+*Original-Anwendungsfenster mit fiktiven Demo-Daten. Firma, Anschrift und Kontakt sind erfunden; `DE000000000 (Demo)` ist ausdrücklich keine gültige Umsatzsteuer-ID. [Bild in voller Auflösung öffnen](../assets/screenshots/verkaeufer-firmenstammdaten.png).*
+
+Der Screenshot zeigt das Register **Firmenstammdaten** für WA. Die Register für TA und MR werden getrennt gepflegt. Die Platzhalter dienen ausschließlich der Erklärung der Eingabefelder und sind nicht für eine produktive Rechnung oder einen erfolgreichen Validierungstest vorgesehen.
+
 ## Firmenangaben
 
 | Feld im Dialog | Verwendung und Vorbereitung |
@@ -41,6 +49,10 @@ Bei WA verwendet die Pflege intern `Straße`, bei TA/MR `Strasse`; der Exporter 
 Der Exporter kann zusätzlich `Modul4` als Bankname lesen. Dafür gibt es im geprüften Verkäuferdialog kein Eingabefeld. Falls benötigt, lässt die Administration den Wert über die zuständige vorhandene Parameterpflege setzen.
 
 **Absender eMail** ist eine Rechnungsangabe. Die tatsächlich für den E-Mail-Versand verwendete Absenderadresse stammt separat aus SMTP-Parameter 6101. Stimmen Sie beide miteinander ab; der Verkäuferdialog richtet den Versandserver nicht ein.
+
+[![Original-Register ERechnung WA mit Demo-Absenderadresse, Bankplatzhaltern und Demo-Ausgabepfad](../assets/screenshots/verkaeufer-erechnung-wa.png)](../assets/screenshots/verkaeufer-erechnung-wa.png)
+
+*Original-Anwendungsfenster mit fiktiven Demo-Daten. `rechnung@elbtal.example`, die IBAN mit Prüfziffern `00` und `DEMODE00XXX` sind Demo-Platzhalter. Sie bilden keine verwendbare Versand- oder Bankkonfiguration. [Bild in voller Auflösung öffnen](../assets/screenshots/verkaeufer-erechnung-wa.png).*
 
 Die Eingabeprüfung kontrolliert bei der IBAN nur eine Mindestlänge von 15 Zeichen und bei der BIC eine Länge von 8 bis 11 Zeichen. Eine erfolgreiche Eingabe bestätigt daher keine fachlich gültige Bankverbindung.
 

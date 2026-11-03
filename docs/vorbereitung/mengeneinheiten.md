@@ -13,6 +13,12 @@
 
 Nur die beiden gelben E-Rechnung-Felder können geändert werden. Die Filterzeile hilft beim Auffinden eines Kürzels. Übernehmen Sie einen Zellwert beispielsweise durch Wechsel in eine andere Zelle. Dadurch wird die Änderung direkt in der Datenbank gespeichert. Ein eigener Speichern-Schalter ist nicht vorgesehen. Neue Grundeinheiten werden in diesem Fenster nicht angelegt oder gelöscht.
 
+[![Original-Mengeneinheitenfenster mit C62, LTR, HUR, MIN, KGM, KWH und einer Stunden-Minuten-Umrechnung mit Faktor 60](../assets/screenshots/mengeneinheiten.png)](../assets/screenshots/mengeneinheiten.png)
+
+*Original-Anwendungsfenster mit fiktiven Demo-Daten. Die Unitcodes sind reale Standardwerte. Gelb markiert sind die editierbaren Zuordnungen; `h->min` ist ein erfundenes internes Kürzel für das Umrechnungsbeispiel. [Bild in voller Auflösung öffnen](../assets/screenshots/mengeneinheiten.png).*
+
+Die ersten sechs Zuordnungen behalten die Einheit mit Faktor **1** bei. In der letzten Zeile werden intern erfasste Stunden als `MIN` mit Faktor **60** ausgegeben: **1,5 HUR × 60 = 90 MIN**, bei **120,00 EUR/HUR ÷ 60 = 2,00 EUR/MIN**. Die Standardwerte sind in der [offiziellen Peppol-Einheitenliste](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20/) und über die [UNECE-Originalverzeichnisse](https://unece.org/code-list-recommendations) nachschlagbar.
+
 ## Reale und unterstützte Codes
 
 Die Codes stammen aus UN/ECE Recommendation 20. Die [offizielle UNECE-Übersicht](https://unece.org/code-list-recommendations) führt zu den Originalverzeichnissen; die [Peppol-Liste für Rechnungseinheiten](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20/) ist direkt durchsuchbar. Die folgende Auswahl ist zugleich im geprüften `QuantityCodes`-Enum des Produkts vorhanden.

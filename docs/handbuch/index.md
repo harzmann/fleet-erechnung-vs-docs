@@ -40,6 +40,22 @@ Klicken Sie auf die gewünschte Datenzeile. Für mehrere Rechnungen verwenden Si
 
 Die Zeilenaktion **XML** beziehungsweise **PDF** startet bereits den Export; sie öffnet keinen reinen Betrachter. **Bericht** ist der Einstieg zum Ansehen.
 
+## Beispiele aus Werkstatt und Fuhrpark
+
+[![Original-Rechnungsübersicht WA mit fiktiven Aufträgen für Lkw-Inspektion, Bremsenwechsel und Aufliegerwartung](../assets/screenshots/rechnungsuebersicht-wa.png)](../assets/screenshots/rechnungsuebersicht-wa.png)
+
+*Original-Anwendungsfenster mit fiktiven Demo-Daten. WA zeigt drei Werkstattrechnungen an die Demo-Spedition Nordhafen und Demo-Transport Westtor. Das Bild lässt sich in voller Auflösung öffnen.*
+
+Die erste Rechnung enthält beispielhaft 3 Stunden Arbeit zu 95,00 EUR, 2 Filter zu 45,00 EUR und 12 Liter Motoröl zu 6,50 EUR: **453,00 EUR netto**. Die zugehörigen Einheiten sind `HUR`, `C62` und `LTR`; bei der hier angenommenen Standardbesteuerung steht `ERechnung_BT151` auf `S`, BT-120 und BT-121 bleiben leer. Die Aufnahme zeigt die Übersicht, keinen Nachweis einer erfolgreichen Festschreibung oder Validierung.
+
+[![Original-Rechnungsübersicht TA mit fiktiven Diesel- und AdBlue-Abrechnungen für zwei Fuhrparks](../assets/screenshots/rechnungsuebersicht-ta.png)](../assets/screenshots/rechnungsuebersicht-ta.png)
+
+*Original-Anwendungsfenster mit fiktiven Demo-Daten. TA zeigt Diesel- und AdBlue-Abrechnungen; die E-Mail-Adressen unter `.example` sind nicht für einen echten Versand bestimmt.*
+
+Für Nordhafen ergeben **600 Liter Diesel × 1,45 EUR + 40 Liter AdBlue × 0,65 EUR = 896,00 EUR netto**. Beide Mengen werden in diesem Beispiel als `LTR` mit Faktor 1 geführt. Der zweite Beispielbeleg enthält 420 Liter Diesel zu 1,45 EUR und damit 609,00 EUR netto.
+
+Die verwendeten Codes finden Sie in der [offiziellen Einheitenliste](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20/) und der [Liste der Steuerkategorien](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNCL5305/). Die genaue Stammdatenpflege erläutern [Mengeneinheiten](../vorbereitung/mengeneinheiten.md) und [Steuersätze](../vorbereitung/steuersaetze.md).
+
 ## Formate unterscheiden
 
 - **XML** enthält die strukturierten Rechnungsdaten im UBL-Format mit XRechnung-Profil.
