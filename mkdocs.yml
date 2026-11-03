@@ -1,0 +1,53 @@
+site_name: FLEET E-Rechnung
+site_description: Endanwender-Handbuch und Vorbereitung der Stammdaten für FLEET E-Rechnung
+site_url: https://harzmann.github.io/fleet-erechnung-vs-docs/
+repo_url: https://github.com/harzmann/fleet-erechnung-vs-docs
+repo_name: harzmann/fleet-erechnung-vs-docs
+copyright: Copyright eh-systemhaus 2026
+theme:
+  name: material
+  language: de
+  font: false
+  palette:
+    primary: blue
+    accent: blue
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.highlight
+    - search.suggest
+plugins:
+  - search:
+      lang: de
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - toc:
+      permalink: true
+extra_css:
+  - assets/stylesheets/extra.css
+nav:
+  - Start: index.md
+  - Endanwender-Handbuch:
+      - Einstieg und Oberfläche: handbuch/index.md
+      - Vorschau und Berichte: handbuch/berichte.md
+      - XML und Hybrid-PDF exportieren: handbuch/export.md
+      - Rechnungen per E-Mail versenden: handbuch/email.md
+      - Prüfen, Protokolle und Fehler: handbuch/pruefung.md
+      - Taskplaner: handbuch/taskplaner.md
+  - Vorbereitung und Stammdaten:
+      - Einrichtung im Überblick: vorbereitung/index.md
+      - Firmenstammdaten und Verkäufer: vorbereitung/firma.md
+      - Kunden und Rechnungsdaten: vorbereitung/kunden.md
+      - Mengeneinheiten und Umrechnung: vorbereitung/mengeneinheiten.md
+      - Steuersätze und BT-Felder: vorbereitung/steuersaetze.md
+      - Technische Voraussetzungen: vorbereitung/technik.md
+      - Checkliste für die erste Rechnung: vorbereitung/checkliste.md
+  - Referenz:
+      - Offizielle Quellen und Begriffe: referenz/quellen.md
+      - Bezugsstand und bekannte Grenzen: referenz/bezugsstand.md
+      - Dokumentation pflegen: referenz/pflege.md

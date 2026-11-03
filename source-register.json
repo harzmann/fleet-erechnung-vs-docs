@@ -1,0 +1,171 @@
+{
+  "documentation_date": "2026-11-03",
+  "timezone": "Europe/Berlin",
+  "repository": "https://github.com/harzmann/fleet-erechnung-vs",
+  "branch": "main",
+  "commit": "878c3504bddc37d0dd91f7a2cae9c75a5d34756f",
+  "includes_local_changes": true,
+  "modified_tracked_files": [
+    "EHFleetXRechnung.CliTester/docs/EHFleetXRechnung.CliTester.md",
+    "EHFleet_VB6_GUI.sln",
+    "EHWinFormViews.App/EHFleetXRechnung.App.vbproj",
+    "EHWinFormViews.App/StartUp.vb",
+    "EHWinFormViews/EHFleetXRechnung.Viewer.vbproj",
+    "EHWinFormViews/InvoiceActions.vb",
+    "EHWinFormViews/RechnungsUebersicht.vb"
+  ],
+  "untracked_paths_not_published": [
+    "bewerbung/"
+  ],
+  "files": [
+    {
+      "path": "EHWinFormViews/RechnungsUebersicht.vb",
+      "sha256": "c23eec6ef826d3f12ad05ac7be9926ac1f8afa25513db13360d57532672e0ab7",
+      "locally_modified": true
+    },
+    {
+      "path": "EHWinFormViews/RechnungsUebersicht.Designer.vb",
+      "sha256": "2cc0f74c1fafaf1ffb8efd52f4a4d9f5d04aa0a42715900cd580faabeb059ec8",
+      "locally_modified": false
+    },
+    {
+      "path": "EHWinFormViews/ParameterEditorForm.vb",
+      "sha256": "54a1f6207eaac66ad095deca728a7e37b4d908a018bbb7608c5125f561a59ded",
+      "locally_modified": false
+    },
+    {
+      "path": "EHWinFormViews/ParameterEditorForm.Designer.vb",
+      "sha256": "86627840fdd1da0d761f2b6c2b7410aff9fb7166dc3d76d0b6319352c0a3a89c",
+      "locally_modified": false
+    },
+    {
+      "path": "EHWinFormViews/MengeneinheitenGridForm.vb",
+      "sha256": "ea254b88e6c1ecb1a97411b1b6d5203615effb7adcf932acaca8e6b7fe057afb",
+      "locally_modified": false
+    },
+    {
+      "path": "EHWinFormViews/SteuersaetzeGridForm.vb",
+      "sha256": "340553f016d69e43cf64969ca120b31d2def7c3472b3b3d1472ac6efe66b6626",
+      "locally_modified": false
+    },
+    {
+      "path": "EHWinFormViews/XRechnungExporter.vb",
+      "sha256": "8ef05f51c5088155d93b51b2781acb368bdf87ba6080977ad5229543cdbc3114",
+      "locally_modified": false
+    },
+    {
+      "path": "EHWinFormViews/XRechnungEmail.vb",
+      "sha256": "f6246b80d625dd6880cf9fa595491a8944aaf1ba5b37e754199188cfc8544707",
+      "locally_modified": false
+    },
+    {
+      "path": "EHWinFormViews/ExportLogGridForm.vb",
+      "sha256": "e5f23fe8d09ff12a82ad706312b03e6732665407e549e648df872bb182387f8b",
+      "locally_modified": false
+    },
+    {
+      "path": "EHWinFormViews/ReportForm.vb",
+      "sha256": "299aa97b0536bc7bc58d3482327b450d2481e8a4e9673e2310213a81c4443c66",
+      "locally_modified": false
+    },
+    {
+      "path": "EHWinFormViews/ERechnungTaskPlanManagerForm.vb",
+      "sha256": "250173b67875d487102c55fd527787379e7c59fd5d50141ee4ce6917997cf8b1",
+      "locally_modified": false
+    },
+    {
+      "path": "EHWinFormViews/ERechnungTaskPlanManagerForm.Designer.vb",
+      "sha256": "50961879123624b04bd31b8448bd31d4bcf417fd92fe35d8ecb97cdf5c9cc151",
+      "locally_modified": false
+    },
+    {
+      "path": "EHWinFormViews/ERechnungTaskSchedulerFacade.vb",
+      "sha256": "20af0de596e4fbe8da96e5862997d44ab640920367406c4f8f9827eb49495203",
+      "locally_modified": false
+    },
+    {
+      "path": "EHWinFormViews/TaskSchedulerService.vb",
+      "sha256": "7b4d3e5249ac5ceeed0190ba8ac506b402cbe24891a46844e393ba26719a06c8",
+      "locally_modified": false
+    },
+    {
+      "path": "EHWinFormViews/ERechnungTaskRunner.vb",
+      "sha256": "3fdc8e03a5f878f76eb0eb99bf7a41df8a346f86f13a1f6e22f249d999eb677f",
+      "locally_modified": false
+    },
+    {
+      "path": "EHWinFormViews/ERechnungTaskPlanRepository.vb",
+      "sha256": "d250839b5acc8cde893eeafff3af65acfbd4bcd424f86cecdc608270e49ad431",
+      "locally_modified": false
+    },
+    {
+      "path": "EHWinFormViews/ERechnungTaskRunRepository.vb",
+      "sha256": "22f4ad12e15f21c0fce0d970a639067aef9b02b6ecc01c56687f7c7463216e5f",
+      "locally_modified": false
+    },
+    {
+      "path": "EHWinFormViews/InvoiceActions.vb",
+      "sha256": "772784bf4cabc2cff4dca7a3c2f2f759828188605082651b95c6fd282e12e28a",
+      "locally_modified": true
+    },
+    {
+      "path": "EHWinFormViews/EHFleetXRechnung.Viewer.vbproj",
+      "sha256": "e9a0b0cb91deaf12a816c47177b939fffa041b124548cffb8e53b19a2e9e0a79",
+      "locally_modified": true
+    },
+    {
+      "path": "EHWinFormViews.App/StartUp.vb",
+      "sha256": "c1cec8bd95e70dbc96c1eaf77085df246e052979301e495f763c9d97051f8374",
+      "locally_modified": true
+    },
+    {
+      "path": "EHWinFormViews.App/ApplicationEvents.vb",
+      "sha256": "513d4644ba8667a103f8a073064c638b4ef02b80fe4eb4a6f3b412fadf4a5ee3",
+      "locally_modified": false
+    },
+    {
+      "path": "EHWinFormViews.App/EHFleetXRechnung.App.vbproj",
+      "sha256": "95331f5808427dfdfedac3553f3baecd1a8c765149298f8d5e7ca900308c0453",
+      "locally_modified": true
+    },
+    {
+      "path": "EHFleet_VB6_GUI.sln",
+      "sha256": "89bdb478bcb5e1b252bc7450ca5cc4aa2a2569798e2ba4ab42a00e4e27fe5db8",
+      "locally_modified": true
+    },
+    {
+      "path": "EHFleetXRechnung.CliTester/docs/EHFleetXRechnung.CliTester.md",
+      "sha256": "84c5090a13bfb21186e9374d5629aebb25eb9adcb8e435129e2e679f2306aa78",
+      "locally_modified": true
+    }
+  ],
+  "dependency_evidence": {
+    "package": "ZUGFeRD-csharp",
+    "version": "17.4.0",
+    "files": [
+      {
+        "path": "lib/net48/s2industries.ZUGFeRD.dll",
+        "sha256": "abc5ccc1b67145819c511f2daaf0f2e703ab9a1a1b2c3f5d4ae04c2177886de3"
+      },
+      {
+        "path": "lib/net48/s2industries.ZUGFeRD.xml",
+        "sha256": "e6367afb6cac2ff846a7f2c90d25d75bd289d046d5eca2edbbdec1542baee81d"
+      }
+    ],
+    "confirmed_unit_codes": [
+      "C62",
+      "LTR",
+      "HUR",
+      "MIN",
+      "KGM",
+      "KWH"
+    ],
+    "confirmed_vatex_serialization": {
+      "VATEX_EU_AE": "VATEX-EU-AE",
+      "VATEX_EU_IC": "VATEX-EU-IC",
+      "VATEX_EU_G": "VATEX-EU-G",
+      "VATEX_EU_O": "VATEX-EU-O",
+      "VATEX_EU_132_1B": "VATEX-EU-132-1B"
+    }
+  }
+}
