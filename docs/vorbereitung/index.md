@@ -28,4 +28,4 @@ In den Tabellenfenstern für Einheiten und Steuern sind nur die gelb markierten 
 
 Die folgenden Kapitel unterscheiden Angaben, die das Programm ausdrücklich auf Leerwerte prüft, Angaben aus dem Rechnungsstandard und Daten, die vom konkreten Geschäftsfall abhängen. Ein Feld ohne sofortige Eingabeprüfung ist deshalb nicht automatisch entbehrlich. Maßgeblich bleibt das Ergebnis der vollständigen Validierung zusammen mit der fachlichen Kontrolle.
 
-Die Beispiele zeigen gültige Codes und nachvollziehbare Zuordnungen. Die zutreffende steuerliche Behandlung legt die zuständige Fachstelle für den jeweiligen Umsatz fest. [Offizielle Quellen](../referenz/quellen.md) und [bekannte Implementierungsgrenzen](../referenz/bezugsstand.md) sind separat aufgeführt.
+Die Beispiele zeigen gültige Codes und nachvollziehbare Zuordnungen. Die zutreffende steuerliche Behandlung legt die zuständige Fachstelle für den jeweiligen Umsatz fest. Die [offiziellen Quellen](../referenz/quellen.md) helfen beim Nachschlagen der verwendeten Begriffe und Codes.

@@ -1,3 +1,5 @@
+<!-- Interne Referenz außerhalb des Kundenportals. -->
+
 # Bezugsstand und bekannte Grenzen
 
 ## Geprüfter Stand
@@ -55,7 +57,7 @@ Die Handbücher dokumentieren diese Beobachtungen; sie ändern den Produktcode n
 
 ## Originalaufnahmen mit fiktiven Daten
 
-Die sieben ergänzten Screenshots vom **3. November 2026** zeigen echte Programmfenster des unveränderten Produkt-Arbeitsstands. Ein separater .NET-8-Host öffnet die Original-Formularklassen gegen die neu angelegte lokale Datenbank `EHFleet_Docs_Demo`. Firmen, Kontakte, Rechnungen und Identifikationsangaben sind ausschließlich fiktiv; Unitcodes und Steuerkategorien sind reale Standardwerte.
+Die neun ergänzten Screenshots vom **3. November 2026** zeigen echte Programmfenster des unveränderten Produkt-Arbeitsstands. Ein separater .NET-8-Host öffnet die Original-Formularklassen gegen die neu angelegte lokale Datenbank `EHFleet_Docs_Demo`. Die Berichtsvorschau verwendet wegen des im Originalcode fest benannten Katalogs eine eigene LocalDB-Instanz `EHFleetDocs` mit ausschließlich synthetischer Datenbank `EHFleet`. Firmen, Kontakte, Rechnungen und Identifikationsangaben sind ausschließlich fiktiv; Unitcodes und Steuerkategorien sind reale Standardwerte. Die Vorschau verwendet eine vorbereitete Beispielvorlage, das Protokoll vorbereitete Fehlermeldungen ohne tatsächlichen Validierungs- oder Versandlauf.
 
 Für die Lesbarkeit wurden Fenster- und Spaltenbreiten angepasst. Bildinhalte wurden weder nachgebildet noch nachträglich ausgetauscht; die Original-Fensteraufnahmen wurden lediglich pixelgleich von JPEG nach PNG umkodiert. Die Bilder bestätigen keine erfolgreiche Rechnungsvalidierung. Die vorhandenen Steuer- und Bankplatzhalter sind dafür ausdrücklich ungeeignet.
 
@@ -67,4 +69,4 @@ Durchgeführt wurden der statische Abgleich der beschriebenen Oberfläche und Ab
 
 Die Dokumentation wird mit `mkdocs build --strict` gebaut und auf interne Links, Anker, Suchindex und das Fehlen von Release-Downloadlinks geprüft. Veröffentlichte Seiten werden zusätzlich auf Erreichbarkeit und Darstellung kontrolliert.
 
-Es wurden **keine produktiven Stammdaten geändert, keine echten Rechnungen verarbeitet und keine E-Mails versendet**. Eine vollständige Ende-zu-Ende-Freigabe von Anwendung, Datenbankschema und lokalem Validator ist damit nicht behauptet. Dafür dient die [Checkliste der ersten Rechnung](../vorbereitung/checkliste.md) in der dafür vorgesehenen Umgebung.
+Es wurden **keine produktiven Stammdaten geändert, keine echten Rechnungen verarbeitet und keine E-Mails versendet**. Eine vollständige Ende-zu-Ende-Freigabe von Anwendung, Datenbankschema und lokalem Validator ist damit nicht behauptet. Dafür dient die [Checkliste der ersten Rechnung](../docs/vorbereitung/checkliste.md) in der dafür vorgesehenen Umgebung.

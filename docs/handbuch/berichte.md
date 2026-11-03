@@ -9,6 +9,14 @@ Die Vorschau dient zur Sichtkontrolle von Anschrift, Rechnungspositionen, Mengen
 3. Klicken Sie in dieser Zeile auf **Bericht**.
 4. Kontrollieren Sie das Rechnungsbild im geöffneten Vorschaufenster.
 
+[![Original-Berichtsvorschau einer fiktiven Werkstattrechnung mit Inspektion, Filtern und Motoröl sowie 539,07 EUR Rechnungsbetrag](../assets/screenshots/berichtsvorschau-werkstatt.png)](../assets/screenshots/berichtsvorschau-werkstatt.png)
+
+*Original-Anwendungsfenster mit fiktiven Demo-Daten. Die Beispielvorlage zeigt dieselbe Werkstattrechnung WA-260101 wie die Rechnungsübersicht. [Bild in voller Auflösung öffnen](../assets/screenshots/berichtsvorschau-werkstatt.png).*
+
+Prüfen Sie im Beispiel die drei Positionen: **3 HUR** Werkstattarbeit, **2 C62** Filter und **12 LTR** Motoröl. Daraus ergeben sich **453,00 EUR netto**, bei der angenommenen Besteuerung mit **19 % / Kategorie S** weitere **86,07 EUR Umsatzsteuer** und **539,07 EUR Rechnungsbetrag**. Bei Kategorie S bleiben BT-120 und BT-121 leer.
+
+Die Abbildung zeigt eine Beispielvorlage. Ihr Rechnungsbild kann je nach eingerichteter Berichtsvorlage anders aussehen. Die dargestellte Demo-IBAN ist nicht verwendbar; die Beispielrechnung ist keine Zahlungsaufforderung.
+
 ## Mehrere Rechnungen ansehen
 
 1. Markieren Sie die gewünschten Zeilen.

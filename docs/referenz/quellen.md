@@ -35,7 +35,3 @@ Die UBL-Quellen passen zur im geprüften Exporter verwendeten XML-Syntax. Die ta
 | Festschreibung / `Issued` | Verarbeitung zur dauerhaften Speicherung der erzeugten XML und Statusänderung im Produkt |
 | Duplikat | Erneute Ausgabe beziehungsweise Verarbeitung einer bereits festgeschriebenen Rechnung aus gespeichertem XML-Bestand |
 | UTC | Weltzeit; Anzeige von Laufzeiten und Protokollzeitpunkten von lokaler Windows-Zeit unterscheiden |
-
-## Produktquellen
-
-Die Bedienbeschreibungen basieren auf [fleet-erechnung-vs](https://github.com/harzmann/fleet-erechnung-vs), nicht auf dem getrennten Hybridviewer-Projekt. [Bezugsstand und Quellenzuordnung](bezugsstand.md) nennen die maßgeblichen Bereiche und die lokalen Abweichungen. Die Bibliotheksprüfung berücksichtigt das im Viewer-Projekt referenzierte NuGet-Paket `ZUGFeRD-csharp` in Version `17.4.0`.

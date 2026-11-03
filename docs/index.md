@@ -20,7 +20,7 @@ Mit FLEET E-Rechnung prüfen, exportieren und versenden Sie Rechnungen aus dem F
 4. Exportieren Sie das vom Empfänger gewünschte Format.
 5. Kontrollieren Sie das Ergebnisprotokoll vor einem Versand oder weiteren Verarbeitungslauf.
 
-!!! info "Bezugsstand: 3. November 2026"
-    Die Anleitungen beschreiben den geprüften lokalen Arbeitsstand des Produkts, einschließlich noch nicht eingecheckter Änderungen. Insbesondere bei manuellen Rechnungen bestehen [bekannte Grenzen](referenz/bezugsstand.md). Die Dokumentation enthält keine Softwaredownloads.
+!!! info "Beispiele und Abbildungen"
+    Die Abbildungen zeigen fiktive Daten aus Fuhrpark, Spedition und Werkstatt. Die dargestellten Steuer- und Bankidentifikationen sind Demo-Platzhalter und nicht für echte Rechnungen oder Zahlungen bestimmt.
 
 Die [offiziellen Quellen](referenz/quellen.md) erklären die verwendeten Codes und Rechnungsbegriffe. Die Produktbeschreibung folgt der vorhandenen Implementierung; ein erfolgreicher Dateiexport allein bedeutet noch keine erfolgreiche fachliche Validierung.

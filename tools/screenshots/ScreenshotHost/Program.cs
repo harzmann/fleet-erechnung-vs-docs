@@ -45,7 +45,16 @@ internal static class Program
             var library = Assembly.Load("ehfleet_classlibrary");
             var databaseType = library.GetType("ehfleet_classlibrary.General+Database", true)!;
             // Fest vorgegebene lokale Demo-Verbindung; weder Registry noch App-Einstellungen lesen.
+#if REPORT_DEMO
+            var pipe = File.ReadAllText(Path.Combine(AppContext.BaseDirectory, "localdb-pipe.txt")).Trim();
+            if (!pipe.StartsWith(@"np:\\.\pipe\LOCALDB#", StringComparison.OrdinalIgnoreCase))
+                throw new InvalidOperationException("Nur die vorbereitete lokale Demo-Pipe ist zulässig.");
+            var connectionString = $"Provider=SQLOLEDB;Data Source={pipe};Initial Catalog=EHFleet;Integrated Security=SSPI;Persist Security Info=False;";
+            const string expectedDatabase = "EHFleet";
+#else
             const string connectionString = "Provider=SQLOLEDB;Data Source=.\\SQLEXPRESS;Initial Catalog=EHFleet_Docs_Demo;Integrated Security=SSPI;Persist Security Info=False;";
+            const string expectedDatabase = "EHFleet_Docs_Demo";
+#endif
             var oleDbType = Assembly.Load("System.Data.OleDb").GetType("System.Data.OleDb.OleDbConnection", true)!;
             using (var preflight = (DbConnection)Activator.CreateInstance(oleDbType, connectionString)!)
                 preflight.Open();
@@ -54,15 +63,24 @@ internal static class Program
                 ?? databaseType.GetProperty("cn")?.GetValue(db))
                 ?? throw new InvalidOperationException("Keine Demo-Datenbankverbindung vom Originaltyp erhalten. Öffentliche Member: "
                     + string.Join(", ", databaseType.GetMembers().Select(member => member.Name).Distinct()));
-            if (connection.State != ConnectionState.Open || connection.Database != "EHFleet_Docs_Demo")
+            if (connection.State != ConnectionState.Open || connection.Database != expectedDatabase)
                 throw new InvalidOperationException("Die fest vorgegebene Demo-Verbindung ist nicht geöffnet.");
             using var check = connection.CreateCommand();
             check.CommandText = "SELECT COUNT(*) FROM dbo.DocsDemoMarker WHERE FixtureVersion=1";
             if (Convert.ToInt32(check.ExecuteScalar()) != 1)
                 throw new InvalidOperationException("Die erwartete Aufnahme-Fixture fehlt.");
 
+#if REPORT_DEMO
+            DemoScreens.PrepareReport(connection);
+            var formType = viewer.GetType("EHFleetXRechnung.Viewer.ReportForm", true)!;
+            var billType = viewer.GetType("EHFleetXRechnung.Viewer.RechnungsArt", true)!;
+            using var form = (Form)Activator.CreateInstance(formType, db, Enum.Parse(billType, "Werkstatt"), new List<int> { 260101 })!;
+#elif LOG_DEMO
+            using var form = DemoScreens.CreateLog();
+#else
             var formType = viewer.GetType("EHFleetXRechnung.Viewer.RechnungsUebersicht", true)!;
             using var form = (Form)Activator.CreateInstance(formType, db)!;
+#endif
             form.StartPosition = FormStartPosition.CenterScreen;
             form.WindowState = FormWindowState.Normal;
             form.Size = new Size(1960, 590);
@@ -79,6 +97,13 @@ internal static class Program
                         opened.WindowState = FormWindowState.Normal;
                         opened.Size = new Size(1960, 590);
                     }
+                    if (kind == "ReportForm")
+                    {
+                        opened.WindowState = FormWindowState.Normal;
+                        opened.Size = new Size(1120, 1130);
+                        opened.Location = new Point(100, 40);
+                    }
+                    if (kind == "ExportLogGridForm") DemoScreens.SizeLog(opened);
                     if (kind is "MengeneinheitenGridForm" or "SteuersaetzeGridForm")
                     {
                         opened.Size = new Size(kind == "SteuersaetzeGridForm" ? 1900 : 1450, 430);

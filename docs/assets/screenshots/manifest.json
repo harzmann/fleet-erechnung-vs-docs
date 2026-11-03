@@ -82,11 +82,36 @@
       "sha256": "24cccc953886d5be4861cd8e8ec6d766d1854382c24e3e8b0d4792e781b1458b",
       "source_capture_sha256": "295f9a81c2cb069a452abe955727cf6bc2d84a7164cba372c76918f7b89f3f77",
       "encoding": "Original JPEG capture re-encoded to PNG without pixel changes"
+    },
+    {
+      "name": "berichtsvorschau-werkstatt",
+      "source_mime": "image/jpeg",
+      "width": 1106,
+      "height": 1123,
+      "window": "Rechnungsdruck",
+      "file": "berichtsvorschau-werkstatt.png",
+      "sha256": "fe0555bcff86ee7042a175a6527ba75721b57a4dc6463a119c1f092fe4e9b817",
+      "source_capture_sha256": "6ba3e07cf24a25da5d186b50c0e52abda9445c9593db5c2aac9a7d0a7b448bb2",
+      "encoding": "Original JPEG capture re-encoded to PNG without pixel changes",
+      "data_kind": "Fictional report template"
+    },
+    {
+      "name": "pruefprotokoll-fehler",
+      "source_mime": "image/jpeg",
+      "width": 2406,
+      "height": 543,
+      "window": "Export-Log",
+      "file": "pruefprotokoll-fehler.png",
+      "sha256": "916017f1535989579eb428ed0341ab01cb09c3bc281f07041bcb54b99f7010a2",
+      "source_capture_sha256": "caf6e8a6aadee41e96c7b53243dcbf32ba0829656535eaf5bfac156fc7b3286f",
+      "encoding": "Original JPEG capture re-encoded to PNG without pixel changes",
+      "data_kind": "Prepared illustrative error entries, not a real validation run"
     }
   ],
   "original_classlibrary_sha256": "882ea46cc71e6fbe5d4e1f9d75358d26a8ad1eec684f63bed0b6b52b5e3a9ae4",
   "product_commit": "878c3504bddc37d0dd91f7a2cae9c75a5d34756f",
   "includes_local_source_changes": true,
   "display_adjustments": "Native window sizes and minimum grid-column widths only; no image-content changes",
-  "fixture_hash_normalization": "UTF-8 with LF line endings"
+  "fixture_hash_normalization": "UTF-8 with LF line endings",
+  "report_fixture_sha256": "205a312647448a9f606358f33ec9d763f810815fab3cfbb333e8e54b32c3dc3c"
 }

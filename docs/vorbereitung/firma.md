@@ -35,7 +35,7 @@ Der Screenshot zeigt das Register **Firmenstammdaten** für WA. Die Register fü
 
 Der Verkäufer-Ländercode wird im geprüften Exporter fest auf **DE** gesetzt. Eine ausländische Verkäuferanschrift lässt sich deshalb nicht allein durch geänderte Adresszeilen korrekt abbilden.
 
-Bei WA verwendet die Pflege intern `Straße`, bei TA/MR `Strasse`; der Exporter liest durchgehend `Straße`. Ob die Datenbank beide Angaben passend bereitstellt, ist installationsabhängig zu prüfen. Kontrollieren Sie insbesondere die tatsächliche Verkäuferstraße in einer TA- beziehungsweise MR-XML; siehe [Bezugsstand](../referenz/bezugsstand.md).
+Kontrollieren Sie die vollständige Verkäuferanschrift in einer Beispielausgabe für jede verwendete Rechnungsart, insbesondere Straße, Postleitzahl und Ort.
 
 ## Ergänzende E-Rechnung-Angaben
 

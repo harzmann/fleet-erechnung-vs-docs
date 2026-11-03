@@ -13,6 +13,14 @@ Die vollständige Validierung prüft die technische Struktur und Rechnungsregeln
 
 ## Protokoll lesen
 
+[![Original-Protokollfenster mit fiktiven Fehlermeldungen zu fehlendem LandISO, fehlender Rechnungs-E-Mail und unzulässigen Befreiungsgründen bei Steuerkategorie S](../assets/screenshots/pruefprotokoll-fehler.png)](../assets/screenshots/pruefprotokoll-fehler.png)
+
+*Original-Anwendungsfenster mit fiktiven Demo-Daten. Die dargestellten Meldungen sind vorbereitete Beispiele zur Erklärung des Protokolls, kein Ergebnis einer echten Kundenverarbeitung. Es wurde keine E-Mail versendet. [Bild in voller Auflösung öffnen](../assets/screenshots/pruefprotokoll-fehler.png).*
+
+Die erste Meldung verweist auf eine fehlende Länderkennung, die zweite auf eine fehlende Rechnungs-E-Mail. Das dritte Beispiel erläutert **BR-S-10**: Bei Steuerkategorie **S** dürfen **BT-120** und **BT-121** nicht gefüllt sein. Die Regel ist bei der [offiziellen Definition des Befreiungsgrundtexts](https://docs.peppol.eu/poacc/billing/3.0/syntax/ubl-invoice/cac-TaxTotal/cac-TaxSubtotal/cac-TaxCategory/cbc-TaxExemptionReason/) beschrieben.
+
+Im Beispiel bleiben die Datei- und Berichtspfade leer. Bei einer tatsächlichen Prüfung öffnen Sie einen vorhandenen HTML-Bericht über **Validator-Bericht**. Ob ein Bericht verfügbar ist, hängt vom jeweiligen Fehlerfall ab.
+
 | Spalte | Bedeutung |
 | --- | --- |
 | **Zeit** | Zeitpunkt des Protokolleintrags; Einträge werden im Programm mit UTC erzeugt |
@@ -40,8 +48,8 @@ HTML-Berichte liegen normalerweise unter `logs/html` beim Programm. Sie werden v
 | Einheit stimmt nicht, obwohl der Export erfolgreich ist | [Unitcode und Faktor](../vorbereitung/mengeneinheiten.md) prüfen; unbekannte Codes können auf `C62` zurückfallen |
 | Kein XML in der Datenbank gefunden | Festgeschriebenen Beleg durch Administration prüfen lassen; Stammdatenänderung ersetzt den fehlenden gespeicherten Beleg nicht |
 | SMTP-Server / Absender fehlt oder Versand fehlgeschlagen | [SMTP-Parameter](../vorbereitung/technik.md), TLS und Zugang prüfen lassen; vor erneutem Versand Status je Rechnung prüfen |
-| Übersicht meldet Datenbankfehler bei leerer Rechnungsart | Im geprüften Stand wird auch eine leere Abfrage als Fehler behandelt; Verbindung und vorhandene Belege durch Administration unterscheiden lassen |
-| MR-XML enthält keine erwarteten Positionen | Verarbeitung anhalten und [MR-Grenze](../referenz/bezugsstand.md) mit der Administration klären |
+| Übersicht meldet Datenbankfehler bei leerer Rechnungsart | Die Meldung kann auch bei einer leeren Rechnungsliste auftreten; Verbindung und vorhandene Belege durch Administration prüfen lassen |
+| MR-XML enthält keine erwarteten Positionen | Verarbeitung anhalten und die Positionsübernahme mit der Administration klären |
 
 ## Fehlerfall geordnet bearbeiten
 

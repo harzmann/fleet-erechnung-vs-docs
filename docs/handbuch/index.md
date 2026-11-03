@@ -18,14 +18,14 @@ Wenn die Übersicht nicht geöffnet wird, beachten Sie die [Hinweise zur Datenba
 
 Beim Öffnen ist WA ausgewählt. Ein Wechsel der Rechnungsart lädt die zugehörige Liste neu. Exportpfade und Verkäuferdaten können je Rechnungsart unterschiedlich sein.
 
-!!! warning "Manuelle Rechnungen im geprüften Stand"
-    MR ist in der Oberfläche auswählbar. Im geprüften XML-Exporter fehlt jedoch ein eigener Zweig zur Übernahme der MR-Positionen. Deshalb ist ein vollständiger MR-Export nicht als funktionsfähig bestätigt. Beachten Sie die [bekannten Grenzen](../referenz/bezugsstand.md), bevor Sie MR verwenden.
+!!! warning "Manuelle Rechnungen vorab prüfen"
+    Lassen Sie die Verarbeitung manueller Rechnungen vor dem ersten Einsatz von Ihrer Administration prüfen und freigeben. Kontrollieren Sie besonders, ob alle Positionen und die richtigen Summen in der Ausgabe enthalten sind.
 
 ## Rechnungen auswählen
 
 Klicken Sie auf die gewünschte Datenzeile. Für mehrere Rechnungen verwenden Sie die übliche Mehrfachauswahl mit **Strg** beziehungsweise **Umschalt** und kontrollieren die markierten Zeilen. Eine Auswahl wirkt auf die Schaltflächen unter **Ausgewählte**.
 
-**Alle** startet eine Sammelverarbeitung für die aktuelle Rechnungsart. Prüfen Sie deren Umfang vor der Bestätigung. Verwenden Sie für gezielte oder erstmals geprüfte Rechnungen **Ausgewählte**. Insbesondere bei sortierter oder gefilterter Liste sollte „Alle“ nicht als Zusage eines fachlich eingegrenzten Rechnungsbestands verstanden werden; siehe [Bezugsstand](../referenz/bezugsstand.md).
+**Alle** startet eine Sammelverarbeitung für die aktuelle Rechnungsart. Prüfen Sie deren Umfang vor der Bestätigung. Verwenden Sie für gezielte oder erstmals geprüfte Rechnungen **Ausgewählte**, insbesondere wenn die Liste sortiert oder gefiltert ist.
 
 ## Oberfläche im Überblick
 

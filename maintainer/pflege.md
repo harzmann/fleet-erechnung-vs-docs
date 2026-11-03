@@ -20,7 +20,7 @@ Die Beispiele dürfen keine echten Kundendaten, Zugangsdaten, Datenbankverbindun
 
 ## Build und Veröffentlichung
 
-Im Repository-Hauptverzeichnis:
+Im Repository-Hauptverzeichnis (interne Anleitung; nicht Bestandteil des Kundenportals):
 
 ```powershell
 python -m pip install -r requirements.txt

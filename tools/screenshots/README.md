@@ -37,7 +37,7 @@ Das Skript baut den separaten Host mit einer Projektreferenz auf die unveränder
 
 Der Host prüft die fest vorgegebene lokale Demo-Verbindung und den Fixture-Marker. Er liest keine FLEET-Registry-Verbindungen oder benutzerspezifischen Programmeinstellungen. Build-Ausgaben, lokale Diagnoseprotokolle und Binärdateien bleiben im ignorierten `.qa/`-Verzeichnis; `bin/` und `obj/` sind ebenfalls ignoriert.
 
-## Sieben Aufnahmen erzeugen
+## Neun Aufnahmen erzeugen
 
 1. Übersicht **WA**: drei fiktive Werkstattaufträge.
 2. Übersicht **TA**: Diesel-/AdBlue-Abrechnungen.
@@ -46,10 +46,32 @@ Der Host prüft die fest vorgegebene lokale Demo-Verbindung und den Fixture-Mark
 5. **Stammdaten → Mengeneinheiten**.
 6. **Stammdaten → Steuersätze**.
 7. **Taskplaner → Administration**: der vorbereitete Plan ist deaktiviert und besitzt keinen ausgeführten Lauf.
+8. Original-**Rechnungsdruck** mit einer fiktiven Werkstatt-Beispielvorlage.
+9. Original-**Export-Log** mit vorbereiteten Fehlerbeispielen zu LandISO, EmailRechnung und BR-S-10.
+
+### Berichtsvorschau und Protokoll
+
+Das originale Berichtsfenster verwendet im Produktcode ausdrücklich die Datenbank `EHFleet`. Dafür wird eine **separate, neu angelegte LocalDB-Instanz** verwendet. Niemals die Berichtsvorlage in einer bestehenden FLEET-Datenbank einrichten.
+
+```powershell
+SqlLocalDB create EHFleetDocs 15.0 -s
+sqlcmd -S '(localdb)\EHFleetDocs' -E -b -f 65001 -i tools/screenshots/report-demo.sql
+./tools/screenshots/start.ps1 -CaptureKind Report
+```
+
+`report-demo.sql` verweigert Nicht-LocalDB-Server und vorhandene Datenbanken dieses Namens. Der Host erwartet eine lokale LocalDB-Pipe und den Fixture-Marker, erzeugt seine fiktive `.mrt`-Vorlage nur im lokalen Build-Verzeichnis und öffnet das unveränderte `ReportForm`. Im Viewer kann über „Ganze Seite“ die vollständige Vorlage angezeigt werden. Das Rechnungsbild ist ein Beispiel, kein vorgeschriebenes Kundenlayout.
+
+Für das originale Protokollfenster:
+
+```powershell
+./tools/screenshots/start.ps1 -CaptureKind Log
+```
+
+Dieser Modus verwendet den vorhandenen synthetischen Bestand `EHFleet_Docs_Demo`. Die Protokolleinträge sind ausdrücklich vorbereitete Schulungsbeispiele; es wird keine echte Validierung, Festschreibung oder E-Mail-Verarbeitung gestartet. Es werden keine erfundenen erfolgreichen Verarbeitungsergebnisse gezeigt.
 
 Nur öffnen und ansehen. **Nicht** auf Versand, Export, Speichern im Taskmanager, Starten oder Windows-Task aktualisieren klicken. Es gibt absichtlich keine SMTP-Konfiguration. Der Demo-Plan wurde per SQL angelegt, nicht als Windows-Aufgabe registriert.
 
-Fensteraufnahmen mit dem Computer-Use-Werkzeug erstellen und nach Sichtprüfung unter `docs/assets/screenshots/` speichern. Die Aufnahmen vom 3. November 2026 wurden mit `@oai/sky.get_window_state` erfasst. Dessen JPEG-Bilddaten wurden ohne Änderung der dekodierten Pixel in PNG umkodiert. Es wurden keine Inhalte übermalt, nachgebildet oder ausgetauscht. Originale bleiben lokal im ignorierten `.qa/captures/`-Verzeichnis.
+Fensteraufnahmen mit dem Computer-Use-Werkzeug erstellen und nach Sichtprüfung unter `docs/assets/screenshots/` speichern. Die Aufnahmen vom 3. November 2026 wurden mit `@oai/sky.get_window_state` erfasst. Dessen JPEG-Bilddaten wurden ohne Änderung der dekodierten Pixel in PNG umkodiert. Es wurden keine Inhalte übermalt, nachgebildet oder ausgetauscht. Originale bleiben lokal im ignorierten `.qa/captures/`-Verzeichnis. Die Programmfenster stammen aus den Originalklassen; die Berichtsvorlage und Protokolldaten sind bewusst als Demo-Inhalte vorbereitet.
 
 `docs/assets/screenshots/manifest.json` enthält Dateinamen, Fensterbezeichnungen, Abmessungen, Prüfsummen und den Fingerabdruck der verwendeten Original-Viewer-Assembly. Der SQL-Fingerprint verwendet UTF-8 mit normalisierten LF-Zeilenenden, damit er unter Windows und im Linux-Build übereinstimmt. Keine EXE, DLL, Zugangsdaten oder eigentlichen Datenbankdateien veröffentlichen.
 

@@ -77,8 +77,11 @@ def main():
     fixture_text = (root / "tools/screenshots/demo.sql").read_text(encoding="utf-8")
     if hashlib.sha256(fixture_text.encode("utf-8")).hexdigest() != manifest["fixture_sha256"]:
         errors.append("Demo SQL fixture checksum differs (UTF-8/LF)")
-    if len(manifest["images"]) != 7:
-        errors.append("Expected seven documented original screenshots")
+    report_fixture = (root / "tools/screenshots/report-demo.sql").read_text(encoding="utf-8")
+    if hashlib.sha256(report_fixture.encode("utf-8")).hexdigest() != manifest["report_fixture_sha256"]:
+        errors.append("Report demo fixture checksum differs (UTF-8/LF)")
+    if len(manifest["images"]) != 9:
+        errors.append("Expected nine documented original screenshots")
     for entry in manifest["images"]:
         png = screenshots / entry["file"]
         data = png.read_bytes()
@@ -90,9 +93,17 @@ def main():
             errors.append(f"Screenshot checksum differs: {png.name}")
         if not any(entry["file"] in href for page in pages.values() for href in page.links):
             errors.append(f"Screenshot is not embedded or linked: {png.name}")
+    for internal in ("referenz/bezugsstand/index.html", "referenz/pflege/index.html"):
+        if (site / internal).exists():
+            errors.append(f"Internal maintainer page must not be published: {internal}")
+    if search.exists():
+        search_text = search.read_text(encoding="utf-8")
+        for title in ("Bezugsstand und bekannte Grenzen", "Dokumentation pflegen"):
+            if title in search_text:
+                errors.append(f"Internal maintainer title in customer search: {title}")
     if errors:
         raise SystemExit("\n".join(errors))
-    print(f"OK: {len(pages)} HTML pages, {link_count} links, seven screenshot checksums, anchors, search topics, no release downloads.")
+    print(f"OK: {len(pages)} HTML pages, {link_count} links, nine screenshot checksums, anchors, search topics, no internal maintainer pages or release downloads.")
 
 
 if __name__ == "__main__":

@@ -14,7 +14,7 @@ Beginnen Sie mit einer einzelnen, fachlich freigegebenen Rechnung in einer dafü
 - [ ] Rechnungsdatum, Lieferdatum, Zahlungsziel und gegebenenfalls Skonto stimmen.
 - [ ] Jede verwendete Mengeneinheit hat einen unterstützten Code und den richtigen positiven Faktor.
 - [ ] Alle Positionen enthalten die richtige Steuerkategorie, den passenden Satz und erforderliche Befreiungsgründe.
-- [ ] Die [bekannten Grenzen](../referenz/bezugsstand.md) wurden für den konkreten Fall berücksichtigt.
+- [ ] Die Ausgabe ist für die verwendete Rechnungsart geprüft und freigegeben.
 
 ## Einzelbeleg kontrollieren
 

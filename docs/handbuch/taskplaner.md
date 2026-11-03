@@ -29,7 +29,7 @@ Ein neuer Editor setzt standardmäßig `Rechnung`, `EMAIL_PDF`, **Aktiv**, `DAIL
 | --- | --- |
 | `Rechnung` | WA – Werkstattrechnung |
 | `Tankabrechnung` | TA – Tankabrechnung |
-| `ManuelleRechnung` | MR – bekannte [Positionsgrenze](../referenz/bezugsstand.md) beachten |
+| `ManuelleRechnung` | MR – vor dem ersten Einsatz Ausgabe und Positionsvollständigkeit durch die Administration prüfen lassen |
 
 | Aktion | Ergebnis |
 | --- | --- |

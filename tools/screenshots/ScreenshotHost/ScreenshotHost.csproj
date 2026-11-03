@@ -5,6 +5,10 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <AssemblyName Condition="'$(CaptureKind)' == 'Report'">ReportScreenshotHost</AssemblyName>
+    <AssemblyName Condition="'$(CaptureKind)' == 'Log'">LogScreenshotHost</AssemblyName>
+    <DefineConstants Condition="'$(CaptureKind)' == 'Report'">$(DefineConstants);REPORT_DEMO</DefineConstants>
+    <DefineConstants Condition="'$(CaptureKind)' == 'Log'">$(DefineConstants);LOG_DEMO</DefineConstants>
     <ProductProjectPath Condition="'$(ProductProjectPath)' == ''">$(MSBuildThisFileDirectory)..\..\..\..\ehfleet_vb6guidll\EHWinFormViews\EHFleetXRechnung.Viewer.vbproj</ProductProjectPath>
   </PropertyGroup>
   <ItemGroup>
