@@ -9,14 +9,15 @@ theme:
   language: de
   font: false
   palette:
+    scheme: default
     primary: blue
     accent: blue
   features:
     - navigation.sections
     - navigation.top
-    - navigation.footer
     - search.highlight
     - search.suggest
+    - content.code.copy
 plugins:
   - search:
       lang: de
@@ -29,8 +30,8 @@ markdown_extensions:
   - toc:
       permalink: true
 extra_css:
+  - stylesheets/fleet-mira-theme.css
   - stylesheets/image-lightbox.css
-  - assets/stylesheets/extra.css
 nav:
   - Start: index.md
   - Endanwender-Handbuch:

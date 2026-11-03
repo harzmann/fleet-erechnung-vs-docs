@@ -1,4 +1,0 @@
-/* Tabellen scrollen auf kleinen Bildschirmen; Feldnamen bleiben zusammen. */
-.md-typeset table:not([class]) th { min-width: 6rem; }
-.md-typeset table:not([class]) code { white-space: nowrap; }
-.md-typeset h1 { color: var(--md-primary-fg-color); }
